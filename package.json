@@ -1,0 +1,16 @@
+{
+  "name": "interactive-pricing-component",
+  "version": "1.0.0",
+  "description": "frontend mentor challenge solution",
+  "main": "index.js",
+  "author": "Filip Madunicky",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4",
+    "uglify-js": "^3.17.4"
+  }
+}
