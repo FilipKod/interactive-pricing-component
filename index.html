@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="icon" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Interactive Pricing Component</title>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
 
-  Pageviews
-  $ /month
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrap">
+        <div class="header__circles"></div>
+        <h1 class="header__title">Simple, traffic-based pricing</h1>
+        <p class="header__description">
+          Sign-up for our 30-day trial. <br />
+          No credit card required.
+        </p>
+      </div>
+    </header>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+    <main class="price-box">
+      <p class="price-box__views"><span>100</span>k pageviews</p>
+      <input type="range" min="10000" max="1000000" step="100000" />
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+      <p class="price-box__price"><span>$16.00</span> / month</p>
 
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="billing">
+        <span>Monthly Billing</span>
+        <input type="checkbox" />
+        <span>Yearly Billing <span class="billing__discount">-25%</span></span>
+      </div>
+
+      <ul class="price-box__list">
+        <li>Unlimited websites</li>
+        <li>100% data ownership</li>
+        <li>Email reports</li>
+      </ul>
+
+      <button class="price-box__btn">Start my trial</button>
+    </main>
+  </body>
 </html>
