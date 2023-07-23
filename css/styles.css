@@ -411,5 +411,107 @@ html {
   font-size: 2rem;
   margin-right: 0.625rem;
 }
+.price-box__billing {
+  font-size: 0.75rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.price-box__billing > span {
+  position: relative;
+}
+.price-box__billing > span > .discount {
+  position: absolute;
+  font-weight: 800;
+  font-size: 0.625rem;
+  color: #ff8d68;
+  background-color: #feede8;
+  border-radius: 9.5px;
+  padding: 0.125rem 0.5rem;
+}
+
+.checkbox {
+  margin: 0 0.75rem;
+  position: relative;
+  cursor: pointer;
+  width: 43px;
+  height: 22px;
+}
+.checkbox input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+input:checked + .checkbox__mark {
+  background-color: #7aeadf;
+}
+input:checked + .checkbox__mark::before {
+  left: 100%;
+  margin-left: -18px;
+}
+.checkbox__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 15px;
+  background-color: #cfd8ef;
+  transition: all 0.3s ease-in-out;
+}
+.checkbox__mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  left: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.range-input__element {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background-color: #ecf0fb;
+  border-radius: 5px;
+  outline: 0;
+  border: none;
+  background-image: linear-gradient(#a4f3eb, #a4f3eb);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+.range-input__element::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #10d8c4;
+  width: 40px;
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 15px 30px 0 rgba(0, 255, 231, 0.6);
+}
+.range-input__element::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #10d8c4;
+  width: 40px;
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 15px 30px 0 rgba(0, 255, 231, 0.6);
+}
 
 /*# sourceMappingURL=styles.css.map */

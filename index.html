@@ -31,15 +31,30 @@
     </header>
 
     <main class="price-box">
-      <p class="price-box__views"><span>100</span>k pageviews</p>
-      <input type="range" min="10000" max="1000000" step="100000" />
+      <p class="price-box__views">
+        <span id="outputRange">100K</span> pageviews
+      </p>
+
+      <div class="range-input">
+        <input
+          id="inputRange"
+          class="range-input__element"
+          type="range"
+          min="0"
+          max="4"
+          step="1"
+        />
+      </div>
 
       <p class="price-box__price"><span>$16.00</span> / month</p>
 
-      <div class="billing">
+      <div class="price-box__billing">
         <span>Monthly Billing</span>
-        <input type="checkbox" />
-        <span>Yearly Billing <span class="billing__discount">-25%</span></span>
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span class="checkbox__mark"></span>
+        </label>
+        <span>Yearly Billing <span class="discount">-25%</span></span>
       </div>
 
       <ul class="price-box__list">
@@ -50,5 +65,6 @@
 
       <button class="price-box__btn">Start my trial</button>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>

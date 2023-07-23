@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as *;
+
+$circle-width: 14px;
+$toggle-padding: 4px;
+
+.checkbox {
+  margin: 0 0.75rem;
+  position: relative;
+  cursor: pointer;
+  width: 43px;
+  height: 22px;
+
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  input:checked + &__mark {
+    background-color: $color-medium-sky-blue;
+
+    &::before {
+      // Variant #1
+      // left: calc(100% - 14px - 4px);
+
+      // Variant #2
+      left: 100%;
+      margin-left: -($circle-width + $toggle-padding);
+    }
+  }
+
+  &__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 15px;
+    background-color: #cfd8ef;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: $circle-width;
+      height: $circle-width;
+      border-radius: 50%;
+      background-color: #ffffff;
+      left: $toggle-padding;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

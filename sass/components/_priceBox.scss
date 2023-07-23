@@ -59,4 +59,27 @@
       margin-right: 0.625rem;
     }
   }
+
+  &__billing {
+    font-size: 0.75rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & > span {
+      position: relative;
+
+      & > .discount {
+        position: absolute;
+        font-weight: 800;
+        font-size: 0.625rem;
+        color: #ff8d68;
+        background-color: #feede8;
+        border-radius: 9.5px;
+        padding: 0.125rem 0.5rem;
+      }
+    }
+  }
 }
