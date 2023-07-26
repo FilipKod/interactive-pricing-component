@@ -1,4 +1,6 @@
 .range-input {
+  width: 100%;
+
   &__element {
     -webkit-appearance: none;
     appearance: none;
@@ -15,7 +17,6 @@
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      background-color: #10d8c4;
       width: 40px;
       aspect-ratio: 1;
       height: auto;
@@ -23,12 +24,15 @@
       border: none;
       cursor: pointer;
       box-shadow: 0 15px 30px 0 rgba($color: #00ffe7, $alpha: 0.6);
+      background-color: #10d8c4;
+      background-image: url(../../images/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     &::-moz-range-thumb {
       -webkit-appearance: none;
       appearance: none;
-      background-color: #10d8c4;
       width: 40px;
       aspect-ratio: 1;
       height: auto;
@@ -36,6 +40,19 @@
       border: none;
       cursor: pointer;
       box-shadow: 0 15px 30px 0 rgba($color: #00ffe7, $alpha: 0.6);
+      background-color: #10d8c4;
+      background-image: url(../../images/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover {
+        background-color: #7aeadf;
+      }
+
+      &:active {
+        background-color: #24aea1;
+        cursor: grabbing;
+      }
     }
   }
 }

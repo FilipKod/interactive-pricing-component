@@ -31,13 +31,11 @@
     </header>
 
     <main class="price-box">
-      <p class="price-box__views">
-        <span id="outputRange">100K</span> pageviews
-      </p>
+      <p class="price-box__views"><span id="pageViews">100K</span> pageviews</p>
 
       <div class="range-input">
         <input
-          id="inputRange"
+          id="viewsRangeInput"
           class="range-input__element"
           type="range"
           min="0"
@@ -46,15 +44,20 @@
         />
       </div>
 
-      <p class="price-box__price"><span>$16.00</span> / month</p>
+      <p class="price-box__price">
+        <span id="displayPrice">$16.00</span> / month
+      </p>
 
       <div class="price-box__billing">
         <span>Monthly Billing</span>
         <label class="checkbox">
-          <input type="checkbox" />
+          <input type="checkbox" id="yearlySubCheck" />
           <span class="checkbox__mark"></span>
         </label>
-        <span>Yearly Billing <span class="discount">-25%</span></span>
+        <span
+          >Yearly Billing
+          <span class="discount" id="discountPercent">-25%</span></span
+        >
       </div>
 
       <ul class="price-box__list">

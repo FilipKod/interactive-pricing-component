@@ -476,6 +476,9 @@ input:checked + .checkbox__mark::before {
   transition: all 0.3s ease-in-out;
 }
 
+.range-input {
+  width: 100%;
+}
 .range-input__element {
   -webkit-appearance: none;
   appearance: none;
@@ -492,7 +495,6 @@ input:checked + .checkbox__mark::before {
 .range-input__element::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  background-color: #10d8c4;
   width: 40px;
   aspect-ratio: 1;
   height: auto;
@@ -500,11 +502,14 @@ input:checked + .checkbox__mark::before {
   border: none;
   cursor: pointer;
   box-shadow: 0 15px 30px 0 rgba(0, 255, 231, 0.6);
+  background-color: #10d8c4;
+  background-image: url(../../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .range-input__element::-moz-range-thumb {
   -webkit-appearance: none;
   appearance: none;
-  background-color: #10d8c4;
   width: 40px;
   aspect-ratio: 1;
   height: auto;
@@ -512,6 +517,17 @@ input:checked + .checkbox__mark::before {
   border: none;
   cursor: pointer;
   box-shadow: 0 15px 30px 0 rgba(0, 255, 231, 0.6);
+  background-color: #10d8c4;
+  background-image: url(../../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.range-input__element::-moz-range-thumb:hover {
+  background-color: #7aeadf;
+}
+.range-input__element::-moz-range-thumb:active {
+  background-color: #24aea1;
+  cursor: grabbing;
 }
 
 /*# sourceMappingURL=styles.css.map */
