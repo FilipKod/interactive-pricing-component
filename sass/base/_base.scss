@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as *;
+
 *,
 *::before,
 *::after {
@@ -15,4 +17,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  @include desktopOnly {
+    background-color: #f9faff;
+  }
 }
