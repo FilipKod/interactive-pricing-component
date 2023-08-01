@@ -1,0 +1,44 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+
+.pb-features {
+  width: 100%;
+  border-top: 1px solid #ecf0fb;
+  padding: 1.5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktopOnly {
+    padding: 2rem 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__list {
+    font-size: 0.75rem;
+    list-style-image: url("../../images/icon-check.svg");
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 0;
+
+    li {
+      margin-bottom: 0.625rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__btn {
+    background-color: $color-dark-blue;
+    border: none;
+    border-radius: 20px;
+    padding: 0.75rem 2.875rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #becdff;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+}

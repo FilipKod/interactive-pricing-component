@@ -1,0 +1,30 @@
+@mixin desktopOnly() {
+  @media screen and (min-width: 510px) {
+    @content;
+  }
+}
+
+@mixin range-thumb() {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 15px 30px 0 rgba($color: #00ffe7, $alpha: 0.6);
+  background-color: #10d8c4;
+  background-image: url(../../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    background-color: #7aeadf;
+  }
+
+  &:active {
+    background-color: #24aea1;
+    cursor: grabbing;
+  }
+}

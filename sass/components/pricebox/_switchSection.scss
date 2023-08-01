@@ -1,0 +1,47 @@
+@use "../../abstracts/mixins" as *;
+
+.switch-section {
+  margin: 2.25rem 0;
+  font-size: 0.75rem;
+  width: 100%;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include desktopOnly {
+    padding: 0 3rem;
+    margin: 2.5rem 0;
+  }
+
+  &__label {
+    margin: 0 0.75rem;
+
+    @include desktopOnly {
+      margin: 0 1rem;
+    }
+  }
+
+  &__discount {
+    font-weight: 800;
+    font-size: 0.625rem;
+    color: #ff8d68;
+    background-color: #feede8;
+    border-radius: 10px;
+    padding: 0.125rem 0.5rem;
+    position: absolute;
+    margin-left: 0.3125rem;
+
+    @include desktopOnly {
+      margin-left: 0.5625rem;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include desktopOnly {
+        display: inline;
+      }
+    }
+  }
+}

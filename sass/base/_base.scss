@@ -10,3 +10,9 @@ html {
   font-size: 16px;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

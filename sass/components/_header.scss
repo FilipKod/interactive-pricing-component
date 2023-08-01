@@ -1,29 +1,52 @@
+@use "../abstracts//mixins" as *;
 @use "../abstracts/variables" as *;
 
 .header {
   background: url("../../images/bg-pattern.svg");
   background-size: cover;
+  background-position: left bottom;
   width: 100%;
-  min-height: 400px;
+  min-height: 25rem;
   text-align: center;
   padding: 5.5625rem 1.5rem 0;
+
+  @include desktopOnly() {
+    min-height: 28rem;
+    padding-top: 6.5rem;
+  }
 
   &__title,
   &__description {
     position: relative;
+
+    @media screen and (min-width: 400px) {
+      br {
+        display: none;
+      }
+    }
   }
 
   &__title {
     font-weight: 800;
     font-size: 1.25rem;
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
     margin: 0;
     color: $color-dark-blue;
+
+    @include desktopOnly() {
+      font-size: 1.75rem;
+    }
   }
 
   &__description {
     font-size: 0.8125rem;
+    font-size: clamp(0.8125rem, 3vw, 0.9375rem);
     line-height: 1.4375rem;
     color: $color-text-shady;
+
+    @include desktopOnly() {
+      font-size: 0.9375rem;
+    }
   }
 
   &__wrap {

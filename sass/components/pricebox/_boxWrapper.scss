@@ -1,0 +1,19 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+
+.box-wrapper {
+  background-color: #fff;
+  position: relative;
+  border-radius: 8px;
+  margin: -10.375rem 1.5rem 0;
+  box-shadow: 0px 20px 30px -5px rgba(#7f89b9, 0.1521);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: $color-text-shady;
+  max-width: 33.75rem;
+
+  @include desktopOnly() {
+    margin-top: -11.4375rem;
+  }
+}
